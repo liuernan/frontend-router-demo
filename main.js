@@ -9,4 +9,25 @@ div4.innerText = "4";
 
 const app = document.querySelector("#app");
 
-app.append(div1);
+const userHash = window.location.hash.substring(1);
+
+switch (userHash) {
+  case "1":
+    app.innerHTML = "";
+    app.append(div1);
+    break;
+  case "2":
+    app.innerHTML = "";
+    app.append(div2);
+    break;
+  case "3":
+    app.innerHTML = "";
+    app.append(div3);
+    break;
+  case "4":
+    app.innerHTML = "";
+    app.append(div4);
+    break;
+
+}
+
