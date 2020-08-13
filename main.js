@@ -28,6 +28,9 @@ switch (userHash) {
     app.innerHTML = "";
     app.append(div4);
     break;
-
+  default:
+    app.innerHTML = "";
+    app.append(div1);
+    break;
 }
 
