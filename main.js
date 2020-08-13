@@ -34,3 +34,30 @@ switch (userHash) {
     break;
 }
 
+window.addEventListener("hashchange", function () {
+  const userHash2 = window.location.hash.substring(1);
+
+  switch (userHash2) {
+    case "1":
+      app.innerHTML = "";
+      app.append(div1);
+      break;
+    case "2":
+      app.innerHTML = "";
+      app.append(div2);
+      break;
+    case "3":
+      app.innerHTML = "";
+      app.append(div3);
+      break;
+    case "4":
+      app.innerHTML = "";
+      app.append(div4);
+      break;
+    default:
+      app.innerHTML = "";
+      app.append(div1);
+      break;
+  }
+}, false);
+
