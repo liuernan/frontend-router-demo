@@ -9,32 +9,19 @@ div4.innerText = "4";
 
 const app = document.querySelector("#app");
 
+const hashMap = {
+  "default": div1,
+  "1": div1,
+  "2": div2,
+  "3": div3,
+  "4": div4
+};
 
 const router = () => {
   const userHash = window.location.hash.substring(1);
 
-  switch (userHash) {
-    case "1":
-      app.innerHTML = "";
-      app.append(div1);
-      break;
-    case "2":
-      app.innerHTML = "";
-      app.append(div2);
-      break;
-    case "3":
-      app.innerHTML = "";
-      app.append(div3);
-      break;
-    case "4":
-      app.innerHTML = "";
-      app.append(div4);
-      break;
-    default:
-      app.innerHTML = "";
-      app.append(div1);
-      break;
-  }
+  app.innerHTML = "";
+  app.append(hashMap[userHash] || hashMap.default);
 };
 
 router();
