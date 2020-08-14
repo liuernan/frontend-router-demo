@@ -9,7 +9,7 @@ div4.innerText = "4";
 
 const app = document.querySelector("#app");
 
-const hashMap = {
+const routeTable = {
   "default": div1,
   "1": div1,
   "2": div2,
@@ -21,7 +21,7 @@ const router = () => {
   const userHash = window.location.hash.substring(1);
 
   app.innerHTML = "";
-  app.append(hashMap[userHash] || hashMap.default);
+  app.append(routeTable[userHash] || routeTable.default);
 };
 
 router();
